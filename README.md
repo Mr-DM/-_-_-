@@ -16,26 +16,6 @@ Perfect for career guidance, beginner orientation, or educational purposes.
 
 ---
 
-## 💡 Example Careers Suggested
-
-- 👨‍💻 Software Developer  
-- 📈 Data Analyst  
-- 🌍 Web Developer  
-- ⚙️ DevOps Engineer  
-- 👔 Project Manager  
-
----
-
-## 🛠️ Skills Covered
-
-- Python, Java, C++  
-- SQL, Excel  
-- HTML, CSS, JavaScript  
-- Docker, Kubernetes  
-- Agile, Scrum  
-
----
-
 ## 📦 Requirements
 
 - Python 3.x
