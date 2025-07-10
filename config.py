@@ -1,1 +1,1 @@
-TOKEN = "TOKEN"  # Replace
+TOKEN = "Token"  # Replace

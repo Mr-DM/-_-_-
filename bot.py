@@ -9,6 +9,11 @@ start_btn = types.KeyboardButton("Start")
 markup.add(start_btn)
 info_btn = types.KeyboardButton("Info")
 markup.add(info_btn)
+Career_btn = types.KeyboardButton("Career")
+markup.add(Career_btn)
+Skills_btn = types.KeyboardButton("Skills")
+markup.add(Skills_btn)
+
 
 # 💬 Handles the /start or "Start" message from the user
 # Introduces the bot and shows the "next" button
@@ -79,20 +84,23 @@ def process_answers(message, answers):
         bot.send_message(message.chat.id, f"🚀 Based on your answers, you might consider a career in: {', '.join(suggestions)}")
     else:
         bot.send_message(message.chat.id, "🤔 It seems like you might not be interested in IT careers. Feel free to ask for more information 💬.")
-    markup.remove(types.KeyboardButton("next"))
 
 # ℹ️ Responds to the "info" or "/info" command with more options
 @bot.message_handler(func=lambda message: message.text == "Info" or message.text == "/info")
 def handle_info(message):
-    Info(message)
+    Info(message)   
 
 # 📚 Provides descriptions and salaries for common IT careers
-@bot.message_handler(func=lambda message: message.text == "/career")
+@bot.message_handler(func=lambda message: message.text == "/career" or message.text == "Career")
 def handle_career(message):
     Career(message)
 # 🛠️ Lists key skills for IT professions
-@bot.message_handler(func=lambda message: message.text == "/skills")
+@bot.message_handler(func=lambda message: message.text == "/skills" or message.text == "Skills")
 def handle_skills(message):
     Skills(message)
+
+@bot.message_handler(func=lambda message: message.text == "/more" or message.text == "More")
+def handle_more(message):
+    More(message)
 # 🔁 Keeps the bot running and listening for new messages
 bot.infinity_polling()
