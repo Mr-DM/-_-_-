@@ -64,6 +64,7 @@ def process_first_answer(message, questions, question_index, answers):
     else:
         bot.send_message(message.chat.id, "🎉 Thank you for answering all the questions!")
         process_answers(message, answers)
+    markup.add(info_btn, Career_btn, Skills_btn)
 
 # 🧠 Analyzes user's answers and suggests possible IT careers
 # Sends back results based on what the user answered "Yes" to
